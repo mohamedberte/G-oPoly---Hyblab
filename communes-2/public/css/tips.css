@@ -1,0 +1,111 @@
+.tips-page{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.tips-image > img{
+    width: 25rem;
+}
+
+.tips{
+    position: absolute;
+    display: table;
+    top: 20%;
+    margin-left: 6%;
+    margin-right: 6%;
+    min-height: 50%;
+
+    border: none;
+
+    background-color: #282246;
+    color: #f0e4d8;
+    
+    background-position: 9px 0px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    line-height: 18px;
+    overflow: hidden;
+    padding: 15px 75px;
+
+    text-align: center;
+}
+
+.tips > h6{
+    margin-top: 10px;
+    font-size: 25%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tips-content{
+    font-size: 18%;
+    text-align: center;
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 10px;
+    color: #f0e4d8;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    opacity: 50%;
+  }
+  
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+} 
+
+.prev {
+    position: absolute;
+    left: 0;
+    border-radius: 3px 0 0 3px;
+} 
+/* The dot/bullet/indicator container */
+.dot-container {
+    padding-bottom: 5%;
+    background: none;
+    text-align: center;
+}
+
+.dot-containerRule {
+    bottom: 0;
+    padding-bottom: 5%;
+    background: none;
+    display: table-footer-group;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 6px;
+    width: 6px;
+    margin: 0 5px;
+    background-color: #f0e4d8;
+    opacity: 40%;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+    background-color: #f0e4d8;
+    opacity: 100%;
+}

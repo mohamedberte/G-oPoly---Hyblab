@@ -1,0 +1,303 @@
+/* ---------- Important media queries for easy responsive content :-) ----------------- */
+/* Can be adapted for other ratios that 9:16 or for horizontal content (ex: 16:9) */
+
+/* This media query ensures that we allways will the width of the screen */
+/* as long as the screen aspect ratio is below 9:16 */
+@media screen and (max-aspect-ratio: 9/16) and (min-width :480px){
+    #container{
+        width: 100vw;
+        margin-top: calc((100vh - 100 * 16vw / 9) / 2);
+        height: calc(100 * 16vw / 9);
+        overflow: hidden;
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to display width */
+    body{
+        font-size: calc(12vw*16/9);
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    #container{
+        margin-top: 0;
+        width: 100vw;
+        height: 88vh; /* pour les navigateurs qui ne supportent pas  -webkit-fill-available */
+        height: -webkit-fill-available;
+        font-size: calc(12vw*16/9);
+        overflow: hidden;
+    }
+}
+
+/* This media query ensures that we allways will the height of the screen */
+/* as long as the screen aspect ratio is higher than 9:16 */
+@media screen and (min-aspect-ratio: 9/16) and (min-width :480px) {
+    #container{
+        margin-left: calc((100vw - 100 * 9vh / 16) / 2);
+        width: calc(100 * 9vh / 16);
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* We set a default font size here. It will be the base for all other font sizes */
+    /* Here the font size is proportional to display height */
+    body{
+        font-size: 12vh;
+    }
+}
+
+/* Normalize margin and padding to ease elements positioning */
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: black;
+    color: white;
+    overflow: hidden;   /* to avoid slider bugs on some browsers */
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+#container{
+    position: absolute; /* for absolute positionning of child elements*/
+}
+
+.bebas-neue{
+    font-family: "Bebas Neue", cursive;
+}
+
+/* -------------- Loader --------------*/
+#loader{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader-img{
+    display: block;
+}
+
+#loader-text{
+    padding-top: 25px;
+    text-align: center;
+    font-size: 25%;
+    font-family: 'Century Gothic';
+    margin-top: 5%;
+    color: #282246;
+}
+
+#loader-text > i, #loader-text > font > i{
+    font-size: 15px;
+    font-style: normal;
+
+}
+
+/* Swiper slider. Need to fill the 9:16 constrained container */
+#mySwiper{
+    width: 100%;
+    height:100%;
+    position: absolute;
+}
+
+/* white navigation bullets */
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+/* the slides and the loader should fill the whole 9:16 zone */
+.swiper-wrapper section, #loader, #main{
+    background-color: #f0e4d8;
+    /*background-color: dodgerblue;*/
+    width: 100%;
+    height: 100%;
+}
+
+/* Pour que la vidéo remplisse son conteneur (elle sera un peu coupée si nécessaire...) */
+.vjs-tech { object-fit: cover; }
+
+/* Menu box */
+.menu-box{
+    height: 100vh;
+}
+
+.center{
+    display: block;
+    margin: 0 auto;
+}
+
+/* Alignement box*/
+.vertical-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-box-classement{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.horizontal-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.decalageBottom50{
+    margin-bottom: 50% !important;
+}
+
+.decalageBottom40{
+    margin-bottom: 40% !important;
+}
+
+.decalageBottom30{
+    margin-bottom: 30% !important;
+}
+
+.decalageBottom15{
+    margin-bottom: 15% !important;
+}
+
+.decalageBottom8{
+    margin-bottom: 8% !important;
+}
+
+.decalageBottom5{
+    margin-bottom: 5% !important;
+}
+
+.text-app, .genericText{
+    font-size: 20%;
+    color: #282246;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5%;
+}
+
+.logo {
+    margin-top: 4vh;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.margin-left-right{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#background-video, #background-image, #background-confetti{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+#background-confetti{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+}
+
+#divError{
+    font-size: 18%;
+    text-align: center;
+    color: red;
+    margin-top: 5%;
+}
+
+.titre-info{
+
+    color: #282246;
+    margin-top: 20px;
+    font-size: 23%;
+    margin-bottom: 5px;
+    font-family: "Bebas Neue";
+    text-align: center;
+
+}
+
+#tour{
+    color: #282246;
+    font-size: 20%;
+    font-family: "Bebas Neue";
+    text-align: center;
+}
+
+#tour2{
+    padding-left: 18.75%;
+    font-size: 23%;
+    font-family: "Bebas Neue";
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    padding-right: 18.75%;
+    color: #282246;
+}
+
+
+#hist_box{
+    height: 30%;
+    position: absolute;
+    bottom: 4%;
+
+}
+
+#pie_box{
+    position: absolute;
+    bottom: 16%;
+}
+
+.cursor-hand:hover{
+    cursor: pointer;
+}
+
+#echarpe {
+    height: 50%;
+    width: 110%;
+    transform: rotate(-9.5deg);
+}
+
+
+#histogramme{
+    color: black;
+}
+
+#pie_chart{
+    height: 210px;
+    padding-top: 4%;
+}
+
+#sous{
+    margin: 0 15px;
+}
+
+#merci-partenaire {
+
+    font-family: Bebas Neue;
+    font-style: normal;
+    align-items: center;
+    text-align: center;
+    font-size:x-large;
+    color: #282246;
+}
+text.title{
+    color: #282246;
+}
+

@@ -1,0 +1,82 @@
+
+<div class="tips-page center map-page">
+    <div id="head-back">
+    <div class="entete">
+            <img class="logo" src="img/geoPoliBand.png" width="25px">
+
+    </div>
+    <div id="couter-country">
+        <p id="numeroCommuneActuelle" class="numeroCommune"></p>
+        <p class="numeroCommune">/</p>
+        <p id="numeroCommuneMax" class="numeroCommune"></p>
+    </div>
+    </div>
+
+    <div id="map"></div>
+
+    <p id="message" class="reem-kufi">
+    </p>
+
+
+    <div class="affir-box">
+    <div id="slider">
+        <img class="button-slider" id="show" src="img/pictogrammes/pictoAffirmation.png">
+        <img class="button-slider" id="indice" src="img/pictogrammes/pictoIdee.png">
+        {{!<img class="button-slider" id="" src="img/pictogrammes/pictoSuivant.png">}}
+    </div>
+
+    <div id="indice-box">
+        <img id="sliderline-ind"src="img/pictogrammes/slideLine.png" >
+        <h6 class="bebas-neue">Indice</h6>
+        <p id="indiceText"></p>
+    </div>
+
+    <div id="affirmation">
+        <img id="sliderline-aff"src="img/pictogrammes/slideLine.png" >
+        <h6 class="bebas-neue">Affirmation</h6>
+
+        <div class="affirmation-content"></div>
+        <div class="affirmation-content"></div>
+        <div class="affirmation-content"></div>
+        <div class="affirmation-content"></div>
+        <div class="affirmation-content"></div>
+
+        <!-- Next/prev buttons -->
+        <div class="button-list">
+            <a class="prev" onclick="sliderplus(-1)">&#10094;</a>
+            <a class="next" onclick="sliderplus(1)">&#10095;</a>
+        </div>
+        
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <span class="dot" onclick="slidercurrent(1)"></span>
+            <span class="dot" onclick="slidercurrent(2)"></span>
+            <span class="dot" onclick="slidercurrent(3)"></span>
+            <span class="dot" onclick="slidercurrent(4)"></span>
+            <span class="dot" onclick="slidercurrent(5)"></span>
+        </div>
+    </div>
+
+
+
+    <div id="panel-confirm">
+        <p id="counrty-name"></p>
+
+        <div class="button-choose" >
+            <img id="confirm-btn" src="img/pictogrammes/pictoValider.png">
+            <img id="reject-btn" src="img/pictogrammes/pictoCroix.png">
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+

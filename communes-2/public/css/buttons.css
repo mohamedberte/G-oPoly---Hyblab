@@ -1,0 +1,82 @@
+.btn-popUp:hover, .btn-menu:hover, .btn-accueil:hover, .btn-accueilBonus:hover{
+    cursor: pointer;
+}
+
+.btn-accueil{  
+    width: 13em;
+    height: 3em;
+    font-size: 20%;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 20px;
+    transition: transform 250ms;
+    line-height: 40px;
+}
+
+.btn-accueilBonus{  
+    background-color: #f0e4d8;
+    color:#282246;
+    border-color: #282246;
+    width: 13em;
+    height: 3em;
+    font-size: 20%;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    transition: transform 250ms;
+}
+
+.btn-menu{  
+    font-weight: 100;
+    width: 91px;
+    height: 83px;
+    font-size: 30%;
+    border: none;
+    border-radius: 10px;
+    transition: transform 250ms;
+}
+
+.btn-popUp{  
+    width: 80%;
+    height: 3em;
+    font-size: 18%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    transition: transform 250ms;
+}
+
+.btn-bleu{
+    background-color: #282246;
+    color: whitesmoke;
+}
+
+.btn-bleuClair{
+    background-color: #5B6C9A;
+    color: whitesmoke;
+}
+
+.btn-vert{
+    background-color: #83C49E;
+    color: whitesmoke;
+}
+
+.btn-rouge{
+    background-color: #EA6D5B;
+    color: whitesmoke;
+}
+
+#boutonRetour{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+
+#continue-btn{
+    position: absolute;
+    width: 80%;
+    bottom: 2%;
+}
